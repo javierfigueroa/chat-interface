@@ -1,0 +1,312 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* chat style */
+.shadow {
+    -webkit-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    -moz-box-shadow: 0 1px 10px rgba(0,0,0,.1);
+    box-shadow: 0 1px 10px rgba(0,0,0,.1);
+}
+
+.fancy-border {
+    background-color: #fafafa;    
+    border: 1px solid #d4d4d4;
+}
+
+.chat-box {
+    padding: 10px;
+    height: 400px;
+}
+
+.side-box {
+    padding: 2px;
+    height: 380px;
+    margin-left: -1px;
+    width: 210px;
+    margin-top: 10px;
+    background-color: #e5e5e5;
+}
+
+.info-box {
+    height: 25px;
+    width: 65%;
+    margin-left: 25px;
+    margin-top: -1px;
+    background-color: #e5e5e5;
+}
+
+.header-bar {
+    background-color: #339bb9;
+    min-height: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-repeat: repeat-x;
+    border: 1px solid #d4d4d4;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: white;
+}
+
+.status-menu {
+    min-width: 45px;
+}
+
+.status-divider {
+    margin: 1px 0px !important;
+}
+
+.dropdown-menu li > a {
+    padding: 3px 10px;
+}
+
+.navbar {
+    margin-bottom: 4px;
+}
+
+.input-append {
+    position: relative;
+}
+
+#user-text {
+    width: 388px;
+}
+
+#chat {
+    height: 320px;
+    margin-bottom: 4px;
+    background-color: #ffffff;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#messages {
+    width: 100%;
+}
+.nav {
+    margin-bottom: 0px;
+}
+
+#contacts-box {
+    height: 69%;
+    padding-top:5px;
+    background-color: #ffffff;
+}
+
+#contacts {
+    overflow: auto;
+    height: 100%;
+    background: #fff;
+}
+
+.icon-mic {
+    height: 16px;
+    width:11px;
+} 
+
+.icon-group {
+    height: 14px;
+    width:20px;
+}
+
+.icon-history {
+    height: 16px;
+    width: 15px;
+}
+
+.search-bar {
+    width: 200px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.contact {
+    width: 96%;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.contact:hover {
+    background-color: #EEEEEE;
+}
+
+.contact.active {
+    background-color: #d9edf7;
+}
+
+.avatar {
+    background-image: url("../img/avatar1.jpg");
+    width: 40px;
+    height: 40px;
+    display: inline;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+}
+
+.nickname {
+    display: inline;
+}
+
+.contact .action {
+    margin: 12px;
+}
+
+.side-box hr {
+    margin: 2px 0;
+} 
+#add-contact {
+    margin: 2px;
+    width: 98%;
+}
+
+.from {
+    padding: 0px 10px 10px;
+}
+
+.from img {
+    display: inline;
+}
+
+.from label {
+    display: inline;
+}
+
+.from span {
+    font-size: 12px;
+}
+
+.message {
+    width: 98%;
+    border-left: 0px;
+    height: 100%;
+    border-right: 0px;
+    padding: 5px;
+}
+
+/* THE SPEECH BUBBLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border {
+	position:relative;
+	padding:5px;
+	margin:1em 0 0em;
+	border:5px solid #d6e9c6;
+	color:#333;
+	background:#fff;
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* Variant : for left positioned triangle
+------------------------------------------ */
+
+.triangle-border.left {
+	margin-left:30px;
+}
+
+/* Variant : for right positioned triangle
+------------------------------------------ */
+
+.triangle-border.right {
+	margin-right:30px;
+}
+
+/* THE TRIANGLE
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.triangle-border:before {
+	content:"";
+	position:absolute;
+	bottom:-20px; /* value = - border-top-width - border-bottom-width */
+	left:40px; /* controls horizontal position */
+    border-width:20px 20px 0;
+	border-style:solid;
+    border-color:#d6e9c6 transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+	content:"";
+	position:absolute;
+	bottom:-13px; /* value = - border-top-width - border-bottom-width */
+	left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+	border-width:13px 13px 0;
+	border-style:solid;
+	border-color:#fff transparent;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
+}
+/* Variant : top
+------------------------------------------ */
+.triangle-border.top-right {
+    margin-top: 60px;
+	border:5px solid #d9edf7;
+}
+.triangle-border.top-right:before {
+    border-color:#d9edf7 transparent;
+}
+/* creates the larger triangle */
+.triangle-border.top-left:before {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:381px; /* controls horizontal position */
+    border-width:0 20px 20px;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.top-left:after {
+	top:-13px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:388px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+    border-width:0 13px 13px;
+}
+
+/* creates the larger triangle */
+.triangle-border.top-right:before {
+	top:-20px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:10px; /* controls horizontal position */
+    border-width:0 20px 20px;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.top-right:after {
+	top:-13px; /* value = - border-top-width - border-bottom-width */
+	bottom:auto;
+	left:auto;
+	right:17px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+    border-width:0 13px 13px;
+}
+
+#alert {
+    position: absolute;
+        width: 698px;
+        z-index: 5000000;
+}
+
+.carousel-inner h4 {
+    padding-left: 80px;
+    padding-right: 80px;
+}

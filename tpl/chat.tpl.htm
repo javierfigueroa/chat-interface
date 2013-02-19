@@ -1,0 +1,48 @@
+<script id="contact" type="text/html">
+    <!-- This next html is the template for a contact -->
+    <div class="contact fancy-border" contact='{{name}}'>
+        <img src={{avatar}} class="avatar" />
+        <label class="nickname">{{name}}</label>
+        <i class="icon-trash pull-right action"></i>
+    </div>
+</script>
+
+<script id="message-left" type="text/html">
+    <div class="message">
+        <div class="from">
+            <img src={{avatar}} class="avatar" />
+            <label><b>{{name}}</b> <span data-livestamp='{{time}}'></span></label>
+        </div>
+        <p class="text triangle-border top-left">
+            {{message}}
+        </p>
+    </div>
+</script>
+
+<script id="message-right" type="text/html">
+    <div class="message">
+        <div class="from pull-right">
+            <img src={{avatar}} class="avatar" />
+            <label><b>{{name}}</b> <span data-livestamp='{{time}}'></span></label>
+        </div>
+        <p class="text triangle-border top-right">
+            {{message}}
+        </p>
+    </div>
+</script>
+
+<script id="delete-alert" type="text/html">
+    <div class="alert alert-block alert-error fade in">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4 class="alert-heading">Are you sure?</h4>
+            <p>Deleting this contact will permanently delete it from your contact list</p>
+            <p>
+              <a class="btn btn-danger chat-alert-yes" href="#">Yes</a> <a class="btn chat-alert-cancel" href="#">Cancel</a>
+            </p>
+          </div>
+</script>
+
+
+<script id="results-row" type="text/html">
+    <tr><td>{{step}}</td><td>{{title}}</td><td>{{time}}</td><td>{{errors}}</td></tr>
+</script>

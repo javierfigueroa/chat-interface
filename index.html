@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chat Interface</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat Interface">
+    <meta name="author" content="Javier Figueroa">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+      <hr>
+      <div id="alert"></div>
+      <div class="row">
+        <div class="span6 chat-box navbar-inner fancy-border shadow">
+            <div class="navbar title-bar">
+                <div class="navbar-inner">
+                    <ul id="menu" class="nav pull-right" role="navigation">                        
+                        <li class="mic-enable"><a href="#" rel="tooltip" data-placement="top" data-original-title="Enable/Disable Microphone"><img class="icon-mic" src="img/glyphicons_300_microphone.png" /></a></li>
+                        <li class="history-enable"><a href="#" rel="tooltip" data-placement="top" data-original-title="Enable/Disable Chat History"><img class="icon-history" src="img/glyphicons_057_history.png" /></a></li>
+                        <li class="divider-vertical"></li>
+                        <li class="dropdown">
+                            <a  id="current-status" href="#" 
+                                role="button" class="dropdown-toggle" 
+                                data-toggle="dropdown" rel="tooltip" data-placement="top" data-original-title="Change Status"><i class="icon-ok"></i>   Online <b class="caret"></b></a>
+                            <ul id="status-menu" class="dropdown-menu status-menu" role="menu" aria-labelledby="drop1">
+                                <li><a tabindex="-1" href="#"><i class="icon-ok"></i>   Online</a></li>
+                                <li><a tabindex="-1" href="#"><i class="icon-plane"></i>   Away</a></li>
+                                <li class="divider status-divider"></li>
+                                <li><a tabindex="-1" href="#"><i class="icon-off"></i>   Offline</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a id="chat-title" class="brand" shref="#">Loading...</a>
+                </div>
+            </div>
+          <div id="chat" class="fancy-border">
+            <div id="messages">
+                <!-- insert messages here -->
+            </div>
+          </div>
+          <div class="input-append">
+            <input id="user-text" class="span5" type="text" placeholder="Type a message here…">
+            <button id="send" class="btn btn-success" type="button">Send</button>
+          </div>
+        </div>
+
+        <div class="span2 side-box fancy-border shadow">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a id="contacts-tab" href="#"><img class="icon-group" src="img/glyphicons_043_group.png" /> Contacts</a>
+                </li>
+                <li><a id="history-tab" href="#"><img class="icon-history" style="margin-right: 5px;" src="img/glyphicons_057_history.png" />History</a></li>
+            </ul>
+            <div id="contacts-box">
+                <div class="input-append search-bar">
+                    <input id="search-input"style="width:152px;" type="text" placeholder="Search for contacts…">
+                    <button id="search-button" class="btn" type="button"><i class="icon-search"></i></button>
+                </div>      
+
+                <button id="add-contact" type="button" class="btn" data-toggle="modal" role="button">Add Contact</button> 
+                <hr>         
+                <div id="contacts">
+                    <!-- insert contacts here -->
+                </div>
+            </div>
+        </div>
+    </div>
+	  <div class="row">
+		<div class="span6 info-box fancy-border shadow">
+		    <small id="status-bar" style="padding-left:10px">Choose a contact and start chatting!!!</small>
+		</div>
+	  </div>
+
+    </div> <!-- /container -->
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="myModalLabel">Add Contact</h4>
+      </div>
+      <div class="modal-body">
+        <fieldset>
+            <form class="form-horizontal">
+              <div class="control-group">
+                <label class="control-label" for="inputName">Name</label>
+                <div class="controls">
+                  <input id="new-contact-name" type="text" id="inputName" placeholder="Joe Smith">
+                </div>
+              </div>
+              <div class="control-group">
+                  <label class="control-label" for="inputName">Avatar</label>
+                  <div class="controls">
+                    <img src="img/avatar99.png" class="img-rounded avatar" >
+                  </div>
+                </div>
+            </form>
+        </fieldset>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <button id="modal-save" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/moment.min.js"></script>
+    <script src="js/livestamp.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/mustache.js"></script>
+    <script src="js/jquery.mustache.js"></script>
+    <script src="js/app.js"></script>
+     
+  </body>
+</html>
